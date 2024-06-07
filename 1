@@ -1,0 +1,16 @@
+$ mkdir directory1 directory2
+（ディレクトリを作成）
+$ touch directory2/file
+（directory2 ディレクトリ内に file を作成）
+$ ls
+directory1 directory2
+$ rmdir directory1
+$ ls
+directory2
+（directory1 は空なので削除できる）
+$ rmdir directory2
+rmdir: failed to remove !directory2/": ディレクトリは空ではありません
+（directory2 は空ではないため削除できない）
+$ rm -r directory2/
+$ ls
+（directory2 も削除できた）
